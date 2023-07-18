@@ -1,15 +1,141 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  amount: MyString
-  odate: 2023-07-18 11:17:08
-  description: MyString
-  otype: MyString
-  category: one
+  amount: 250
+  odate: 2023-07-10 11:17:08
+  description: 1st Operation Description
+  otype: expense
+  category: cat_1
 
 two:
-  amount: MyString
+  amount: 556
+  odate: 2023-07-11 11:17:08
+  description: 2nd Operation Description
+  otype: expense
+  category: cat_3
+
+ three:
+  amount: 150
+  odate: 2023-07-14 11:17:08
+  description: 3rd Operation Description
+  otype: expense
+  category: cat_1
+
+four:
+  amount: 234
+  odate: 2023-07-13 11:17:08
+  description: 4th Operation Description
+  otype: expense
+  category: cat_2
+
+ five:
+  amount: 800
   odate: 2023-07-18 11:17:08
-  description: MyString
-  otype: MyString
-  category: two
+  description: 5th Operation Description
+  otype: expense
+  category: cat_1
+
+six:
+  amount: 960
+  odate: 2023-07-17 11:17:08
+  description: 6th Operation Description
+  otype: expense
+  category: cat_2
+
+seven:
+  amount: 460
+  odate: 2023-07-10 11:17:08
+  description: 7th Operation Description
+  otype: expense
+  category: cat_1
+
+eight:
+  amount: 340
+  odate: 2023-07-15 11:17:08
+  description: 8ht Operation Description
+  otype: expense
+  category: cat_2
+
+nine:
+  amount: 5000
+  odate: 2023-07-12 11:17:08
+  description: 9th Operation Description
+  otype: income
+  category: cat_4
+
+ten:
+  amount: 10000
+  odate: 2023-07-17 11:17:08
+  description: 10th Operation Description
+  otype: income
+  category: cat_4   
+
+eleven:
+  amount: 570
+  odate: 2023-07-18 11:17:08
+  description: 11th Operation Description
+  otype: expense
+  category: cat_5
+  
+twelve:
+  amount: 970
+  odate: 2023-07-13 11:17:08
+  description: 12th Operation Description
+  otype: expense
+  category: cat_5
+
+ thirdteen:
+  amount: 2500
+  odate: 2023-07-12 11:17:08
+  description: 13th Operation Description
+  otype: expense
+  category: cat_7
+
+fourteen:
+  amount: 5000
+  odate: 2023-07-15 11:17:08
+  description: 14th Operation Description
+  otype: expense
+  category: cat_8
+
+ fifteen:
+  amount: 100
+  odate: 2023-07-16 11:17:08
+  description: 15th Operation Description
+  otype: expense
+  category: cat_9
+
+sixteen:
+  amount: 500
+  odate: 2023-07-19 11:17:08
+  description: 16th Operation Description
+  otype: expense
+  category: cat_8
+
+  seventeen:
+  amount: 700
+  odate: 2023-07-19 11:17:08
+  description: 17th Operation Description
+  otype: expense
+  category: cat_9
+
+eighteen:
+  amount: 350
+  odate: 2023-07-10 11:17:08
+  description: 18th Operation Description
+  otype: expense
+  category: cat_9
+
+ nineteen:
+  amount: 210
+  odate: 2023-07-14 11:17:08
+  description: 19th Operation Description
+  otype: expense
+  category: cat_9
+
+twenty:
+  amount: 220
+  odate: 2023-07-12 11:17:08
+  description: 20th Operation Description
+  otype: expense
+  category: cat_10   
