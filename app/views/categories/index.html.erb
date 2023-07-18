@@ -1,14 +1,43 @@
+<section id='categories-section' class="section">
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+<h2 class='mb-3'>Категорії витрат\доходів </h2>
+<% if @categories.present? %>
+<div id="categories" class="table-responsive">  
+    <table class = "table table-bordered table-striped table-hover table-bordered align-middle">
+   <thead>
+      <tr class="table-warning">
+         <th scope="col">Назва</th>
+         <th scope="col">Опис</th>
+         <th scope="col" colspan="3" class="text-center">Управління категоріями </th>
+      </tr>
+   </thead>
+   
+   <tbody   
+      <% @categories.each do |category| %>   
+         <tr>
+            <td><%= category.name %></td>
+            <td><%= category.description %></td>
 
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+            <td class="text-center"><%= link_to "Відкрити категорію", category, class: "btn btn-outline-info" %> </td>
+            <td class="text-center"><%= link_to "Редагувати", edit_category_path(category), class: "btn btn-outline-success btn-sm" %> </td>
+            <td class="text-center"> <%= button_to "Видалити", category, method: :delete, class: 'btn btn-danger btn-sm', data: {"turbo-confirm": "Ви впевнені що хочете видалити #{category.name}?"}  %></td>
+         </tr> 
+      <% end %>        
+   </tbody> 
+   <tfoot>
+  <tr class="table-warning">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr> 
+  </tfoot>
+  </table>
 </div>
-
-<%= link_to "New category", new_category_path %>
+<% else %>
+<h3>Ой, категорій ще не створено :( </h3>
+<% end %>
+<%= link_to "New category", new_category_path, class: "btn btn-primary" %>
+</section>
