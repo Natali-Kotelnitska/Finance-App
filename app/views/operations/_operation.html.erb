@@ -1,27 +1,27 @@
 <div id="<%= dom_id operation %>">
   <p>
-    <strong>Amount:</strong>
+    <strong>Сума:</strong>
     <%= operation.amount %>
   </p>
 
   <p>
-    <strong>Odate:</strong>
+    <strong>Дата:</strong>
     <%= operation.odate %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Опис:</strong>
     <%= operation.description %>
   </p>
 
   <p>
-    <strong>Otype:</strong>
+    <strong>Тип операції:</strong>
     <%= operation.otype %>
   </p>
 
   <p>
-    <strong>Category:</strong>
-    <%= operation.category_id %>
+    <strong>  Категорія:</strong>
+     <%=link_to operation.category.name, operation.category%>
   </p>
 
 </div>

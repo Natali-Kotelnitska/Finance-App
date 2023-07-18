@@ -2,9 +2,9 @@
 
 <%= render @operation %>
 
-<div>
-  <%= link_to "Edit this operation", edit_operation_path(@operation) %> |
-  <%= link_to "Back to operations", operations_path %>
-
-  <%= button_to "Destroy this operation", @operation, method: :delete %>
+<div class="mt-5">
+   <%= link_to "Редагувати", edit_operation_path( @operation), class: "btn btn-success btn-sm mb-3" %> 
+  
+  <%= button_to "Видалити", [@category, @operation], method: :delete, class: 'btn btn-danger btn-sm mb-3'%>
+  <%= link_to "Back to operations", operations_path, class: "btn btn-secondary" %>
 </div>

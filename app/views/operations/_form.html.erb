@@ -12,31 +12,31 @@
   <% end %>
 
   <div>
-    <%= form.label :amount, style: "display: block" %>
+    <%= form.label :"Сума:", style: "display: block" %>
     <%= form.text_field :amount %>
   </div>
 
   <div>
-    <%= form.label :odate, style: "display: block" %>
-    <%= form.datetime_field :odate %>
+    <%= form.label :"Дата:", style: "display: block" %>
+    <%= form.date_field :odate %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :"Опис", style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.label :otype, style: "display: block" %>
-    <%= form.text_field :otype %>
+    <%= form.label :"Тип операції", style: "display: block" %>
+    <%= form.select :otype, ["Витрата", "Дохід"] %>
   </div>
 
   <div>
-    <%= form.label :category_id, style: "display: block" %>
-    <%= form.text_field :category_id %>
+    <%= form.label :"Категорія", style: "display: block" %>
+    <%= form.select :category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id]}) %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="btn btn-success mt-3">
+<%= form.submit "Зберегти", class: "btn btn-success"%>
   </div>
 <% end %>

@@ -1,2 +1,41 @@
-<h1>Reports#report_by_dates</h1>
-<p>Find me in app/views/reports/report_by_dates.html.erb</p>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<section class="report-by-category-section section">
+<h2 class="text-center">Звіт по <span class="text-warning">датам</span></h2>
+
+<p><%= @data %></p>
+
+  <div>
+    <%= link_to "Назад до генератора звітів", reports_index_path, class: "btn btn-secondary mt" %>
+  </div>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: <%= raw @dates %>,
+      datasets: [{
+        label: 'Сума',
+        data: <%= @rates %>,
+         fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+</section>
+
+ 

@@ -1,14 +1,49 @@
+<section class='operations-section section'>
 <p style="color: green"><%= notice %></p>
 
-<h1>Operations</h1>
+<h2>Список операцій</h2>
+<% if @operations.present? %>
+<div id="operations" class="table-responsive">
 
-<div id="operations">
-  <% @operations.each do |operation| %>
-    <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+    <table class = "table table-bordered table-striped table-hover table-bordered align-middle">
+   <thead>
+      <tr class="table-warning">
+         <th scope="col">Опис</th>
+         <th scope="col">Сума</th>
+         <th scope="col">Дата</th>
+         <th scope="col" class="text-center">Категорія</th>
+         <th scope="col">Управління</th>
+      </tr>
+   </thead>
+   
+   <tbody   
+      <% @operations.each do |operation| %>  
+        <tr>
+            <td><%= operation.description %> </td>
+            <td><%= operation.amount %></td>
+            <td><%= operation.odate.to_date %></td>
+            <td class="text-center"> <%=link_to operation.category.name, operation.category%></td>
+            <td><%= link_to "View operation", operation, class: "btn btn-outline-info" %> </td>
+         </tr>      
+      <% end %>        
+   </tbody> 
+   <tfoot>
+  <tr class="table-warning">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr> 
+  </tfoot>
+  </table>
+
 </div>
-
-<%= link_to "New operation", new_operation_path %>
+<% else %>
+<div class="notFound">
+<h3>Операцій не знайдено :( </h3>
+</div>
+<% end %>
+   
+<%= link_to "Нова операція", new_operation_path(@operation), class: "btn btn-success" %>
+</section>

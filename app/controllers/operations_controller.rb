@@ -1,6 +1,6 @@
 class OperationsController < ApplicationController
   before_action :set_operation, only: %i[ show edit update destroy ]
-#  before_action :get_categories
+   before_action :get_categories
   # GET /operations or /operations.json
   def index
     @operations = Operation.all
@@ -59,6 +59,10 @@ class OperationsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def get_categories
+      @categories = Category.all.order(:name)
+    end
+    
     def set_operation
       @operation = Operation.find(params[:id])
     end
