@@ -1,6 +1,6 @@
 class OperationsController < ApplicationController
   before_action :set_operation, only: %i[ show edit update destroy ]
-
+#  before_action :get_categories
   # GET /operations or /operations.json
   def index
     @operations = Operation.all
