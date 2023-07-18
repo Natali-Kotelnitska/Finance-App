@@ -24,7 +24,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: expense-tracker
-  host:
+  host: finmanager-db.internal
   pool: 5
-  username: postgre
-  password:
+  username: postgres
+  password: YG4meXXi8amMZR9
