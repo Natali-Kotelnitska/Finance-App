@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: MyString
+  odate: 2023-07-18 11:17:08
+  description: MyString
+  otype: MyString
+  category: one
+
+two:
+  amount: MyString
+  odate: 2023-07-18 11:17:08
+  description: MyString
+  otype: MyString
+  category: two
