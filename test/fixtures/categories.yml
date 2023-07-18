@@ -1,41 +1,39 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-cat_1:
-  name: 1st_Category
-  description: 1st_description
+cat1:
+  name: 1st Category
+  description: 1st description
 
-cat_2:
-  name: 2nd_Category
-  description: 2nd_description
+cat2:
+  name: 2nd Category
+  description: 2nd description
 
-cat_3:
-  name: 3rd_Category
-  description: 3rd_description
+cat3:
+  name: 3rd Category
+  description: 3rd description
+cat4:
+  name: 4th Category
+  description: 4th description
 
-cat_4:
-  name: 4th_Category
-  description: 4th_description
+cat5:
+  name: 5th Category
+  description: 5th description
+cat6:
+  name: 6th Category
+  description: 6th description
 
-cat_5:
-  name: 5th_Category
-  description: 5th_description
+cat7:
+  name: 7th Category
+  description: 7th description
 
-cat_6:
-  name: 6th_Category
-  description: 6th_description
+cat8:
+  name: 8th Category
+  description: 8th description
 
-cat_7:
-  name: 7th_Category
-  description: 7th_description
+cat9:
+  name: 9th Category
+  description: 9th description
 
-cat_8:
-  name: 8th_Category
-  description: 8th_description
-
-cat_9:
-  name: 9th_Category
-  description: 9th_description
-
-cat_10:
-  name: 10th_Category
-  description: 10th_description
+cat10:
+  name: 10th Category
+  description: 10th description

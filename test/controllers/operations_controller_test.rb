@@ -40,9 +40,9 @@ class OperationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy operation" do
     assert_difference("Operation.count", -1) do
-      delete operation_url(@operation)
+    delete operation_url(@operation)
     end
 
-    assert_redirected_to operations_url
+  assert_redirected_to operations_url
   end
 end
