@@ -25,11 +25,11 @@ class ReportsController < ApplicationController
 
     @data = params
     @category = Category.find(params[:category_id])
-    @operation = Operation.where("category_id": @category.id)
+    @operation = Operation.where("category_id": params[:category_id])
     @total = @operation.sum(:amount)
 
     @dataArr = @operation.map{|el| [el.amount.to_i, el.description ]}
-    @amount = @dataArr.map {|d| d[0]}
+    @amount = @dataArr.map {|sum| sum[0]}
     @description = @dataArr.map {|d| d[1]}
   end
 
