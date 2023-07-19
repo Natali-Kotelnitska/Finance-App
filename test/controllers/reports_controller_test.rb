@@ -15,8 +15,8 @@ class ReportsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "should get report_by_dates" do
-  #   get reports_report_by_dates_url
-  #   assert_response :success
-  # end
+  test "should get report_by_dates" do
+    get reports_report_by_dates_url
+    assert_response :success
+  end
 end

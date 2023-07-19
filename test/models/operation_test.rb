@@ -16,16 +16,4 @@ class OperationTest < ActiveSupport::TestCase
     assert_not(new_operation.valid?)
   end
 
-  # test "return true if everything is good" do
-   
-  #   new_operation = Operation.new(amount: "565", odate: "2023-06-11 11:17:08", description: "New Operation Description", otype: "expense", category: "catnew")
-  #   assert(new_category.valid?)
-  # end
-
-  # test "saving and gathering" do
-  #   new_category = Category.new(name: "new category", description: "new description")
-  #   new_category.save()
-  #   new_cat = Category.find_by(name: "new category")
-  #   assert_equal("new description", new_cat.description)
-  # end
 end
